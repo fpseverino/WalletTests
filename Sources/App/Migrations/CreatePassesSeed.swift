@@ -1,7 +1,7 @@
 import Fluent
 import Passes
 
-struct CreatePasses: AsyncMigration {
+struct CreatePassesSeed: AsyncMigration {
     func prepare(on database: any Database) async throws {
         let passes = [
             PassData(title: "Personalize"),

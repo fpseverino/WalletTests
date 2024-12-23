@@ -10,6 +10,7 @@ struct CreateOrderData: AsyncMigration {
                 OrderData.FieldKeys.orderID, .uuid, .required,
                 .references(Order.schema, .id, onDelete: .cascade)
             )
+            .unique(on: OrderData.FieldKeys.orderID)
             .create()
     }
 

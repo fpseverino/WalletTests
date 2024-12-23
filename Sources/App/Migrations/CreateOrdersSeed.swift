@@ -1,7 +1,7 @@
 import Fluent
 import Orders
 
-struct CreateOrders: AsyncMigration {
+struct CreateOrdersSeed: AsyncMigration {
     func prepare(on database: any Database) async throws {
         try await OrderData(title: "Order")
             .create(on: database)

@@ -10,6 +10,7 @@ struct CreatePassData: AsyncMigration {
                 PassData.FieldKeys.passID, .uuid, .required,
                 .references(Pass.schema, .id, onDelete: .cascade)
             )
+            .unique(on: PassData.FieldKeys.passID)
             .create()
     }
 

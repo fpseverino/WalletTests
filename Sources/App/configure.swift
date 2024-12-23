@@ -26,7 +26,7 @@ public func configure(_ app: Application) async throws {
 
     PassesService<PassData>.register(migrations: app.migrations)
     app.migrations.add(CreatePassData())
-    app.migrations.add(CreatePasses())
+    app.migrations.add(CreatePassesSeed())
 
     // MARK: - Orders
 
@@ -44,7 +44,7 @@ public func configure(_ app: Application) async throws {
 
     OrdersService<OrderData>.register(migrations: app.migrations)
     app.migrations.add(CreateOrderData())
-    app.migrations.add(CreateOrders())
+    app.migrations.add(CreateOrdersSeed())
 
     try await app.autoMigrate()
 
