@@ -1,4 +1,6 @@
-import Passes
+import VaporWalletPasses
+import WalletPasses
+import FluentWalletPasses
 import Vapor
 
 struct PassJSONData: PassJSON.Properties {
@@ -9,14 +11,14 @@ struct PassJSONData: PassJSON.Properties {
     let serialNumber: String
     let teamIdentifier = Environment.get("APPLE_TEAM_IDENTIFIER")!
 
-    private let webServiceURL = "\(Environment.get("WEBSITE_URL")!)api/passes/"
+    private let webServiceURL = "\(Environment.get("WEBSITE_URL")!)/api/passes/"
     private let authenticationToken: String
     private let logoText = "Vapor"
     private let sharingProhibited = true
     let backgroundColor = "rgb(207, 77, 243)"
     let foregroundColor = "rgb(255, 255, 255)"
 
-    let barcodes = Barcode(message: "test")
+    let barcodes = [Barcode(message: "test")]
     struct Barcode: PassJSON.Barcodes {
         let format = PassJSON.BarcodeFormat.qr
         let message: String

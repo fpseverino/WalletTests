@@ -1,5 +1,5 @@
 {
-  "originHash" : "e44bb358d3864ef8621955a85ff74a3ab8e5577cacf145a7f5dd4de71ac12ef3",
+  "originHash" : "8d755a38a38dcc70c331fa00fc567324d1069ff017bf02eb29acb2d729e4506a",
   "pins" : [
     {
       "identity" : "apns",
@@ -74,21 +74,21 @@
       }
     },
     {
+      "identity" : "fluent-wallet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fpseverino/fluent-wallet.git",
+      "state" : {
+        "revision" : "fbfe7eb39506d4ce77b4c0eeb802f213f359d347",
+        "version" : "0.1.0"
+      }
+    },
+    {
       "identity" : "multipart-kit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/multipart-kit.git",
       "state" : {
         "revision" : "3498e60218e6003894ff95192d756e238c01f44e",
         "version" : "4.7.1"
-      }
-    },
-    {
-      "identity" : "passkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vapor-community/PassKit.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "01bd8199959fedde174a18396ea4bbccadfbf437"
       }
     },
     {
@@ -159,8 +159,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-certificates.git",
       "state" : {
-        "revision" : "1fbb6ef21f1525ed5faf4c95207b9c11bea27e94",
-        "version" : "1.6.1"
+        "revision" : "274f8668d3ec5d2892904d8465635c5ea659f767",
+        "version" : "1.7.0"
       }
     },
     {
@@ -179,6 +179,15 @@
       "state" : {
         "revision" : "ff0f781cf7c6a22d52957e50b104f5768b50c779",
         "version" : "3.10.0"
+      }
+    },
+    {
+      "identity" : "swift-distributed-tracing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-distributed-tracing.git",
+      "state" : {
+        "revision" : "6483d340853a944c96dbcc28b27dd10b6c581703",
+        "version" : "1.1.2"
       }
     },
     {
@@ -263,6 +272,15 @@
       }
     },
     {
+      "identity" : "swift-service-context",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-service-context.git",
+      "state" : {
+        "revision" : "0c62c5b4601d6c125050b5c3a97f20cce881d32b",
+        "version" : "1.1.0"
+      }
+    },
+    {
       "identity" : "swift-system",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-system.git",
@@ -272,12 +290,30 @@
       }
     },
     {
+      "identity" : "swift-wallet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fpseverino/swift-wallet.git",
+      "state" : {
+        "revision" : "c1d6ae4011518758eeea011774875b80d47ccb28",
+        "version" : "0.3.0"
+      }
+    },
+    {
       "identity" : "vapor",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vapor/vapor.git",
       "state" : {
-        "revision" : "e1002f35edf92e2a579580f2d1df92e01287c6c7",
-        "version" : "4.108.0"
+        "revision" : "4d7456c0d4b33ef82783a90ecfeae33a52a3972a",
+        "version" : "4.111.0"
+      }
+    },
+    {
+      "identity" : "wallet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vapor-community/wallet.git",
+      "state" : {
+        "revision" : "64b2f3624a5fa48e5391007a9cf1f1778ffce311",
+        "version" : "0.7.0"
       }
     },
     {

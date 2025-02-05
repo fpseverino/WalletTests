@@ -1,5 +1,5 @@
 import Fluent
-import Passes
+import VaporWalletPasses
 import Vapor
 
 struct PassesController: RouteCollection {

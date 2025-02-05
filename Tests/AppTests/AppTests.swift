@@ -1,6 +1,6 @@
 import Fluent
 import Testing
-import XCTVapor
+import VaporTesting
 
 @testable import App
 

@@ -1,7 +1,7 @@
 import Fluent
 import FluentSQLiteDriver
-import Orders
-import Passes
+import VaporWalletOrders
+import VaporWalletPasses
 import Vapor
 
 public func configure(_ app: Application) async throws {
@@ -20,6 +20,8 @@ public func configure(_ app: Application) async throws {
         pemPrivateKeyPassword: Environment.get("PASS_PEM_PRIVATE_KEY_PASSWORD")!
     )
 
+    try app.grouped("api", "passes").register(collection: passesService)
+
     app.databases.middleware.use(passesService, on: .sqlite)
 
     try app.register(collection: PassesController(passesService: passesService))
@@ -37,6 +39,8 @@ public func configure(_ app: Application) async throws {
         pemPrivateKey: Environment.get("ORDER_PEM_PRIVATE_KEY")!,
         pemPrivateKeyPassword: Environment.get("ORDER_PEM_PRIVATE_KEY_PASSWORD")!
     )
+
+    try app.grouped("api", "orders").register(collection: ordersService)
 
     app.databases.middleware.use(ordersService, on: .sqlite)
 

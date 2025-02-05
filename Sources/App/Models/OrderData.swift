@@ -1,5 +1,7 @@
 import Fluent
-import Orders
+import VaporWalletOrders
+import FluentWalletOrders
+import WalletOrders
 import Vapor
 
 final class OrderData: OrderDataModel, @unchecked Sendable {
@@ -36,7 +38,7 @@ extension OrderData {
         try await OrderJSONData(data: self, order: self.$order.get(on: db))
     }
 
-    func template(on db: any Database) async throws -> String {
+    func sourceFilesDirectoryPath(on db: any Database) async throws -> String {
         "\(FileManager.default.currentDirectoryPath)/Templates/Orders"
     }
 }

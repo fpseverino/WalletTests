@@ -1,5 +1,5 @@
 import Fluent
-import Passes
+import VaporWalletPasses
 
 struct CreatePassesSeed: AsyncMigration {
     func prepare(on database: any Database) async throws {

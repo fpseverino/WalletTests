@@ -1,4 +1,6 @@
-import Orders
+import VaporWalletOrders
+import WalletOrders
+import FluentWalletOrders
 import Vapor
 
 struct OrderJSONData: OrderJSON.Properties {
@@ -14,7 +16,7 @@ struct OrderJSONData: OrderJSON.Properties {
     let orderManagementURL = Environment.get("WEBSITE_URL")!
     let authenticationToken: String
 
-    private let webServiceURL = "\(Environment.get("WEBSITE_URL")!)api/orders/"
+    private let webServiceURL = "\(Environment.get("WEBSITE_URL")!)/api/orders/"
 
     struct MerchantData: OrderJSON.Merchant {
         let merchantIdentifier = "com.example.pet-store"

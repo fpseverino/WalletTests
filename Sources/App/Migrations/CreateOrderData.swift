@@ -1,5 +1,6 @@
 import Fluent
-import Orders
+import VaporWalletOrders
+import FluentWalletOrders
 
 struct CreateOrderData: AsyncMigration {
     func prepare(on database: any Database) async throws {

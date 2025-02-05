@@ -15,7 +15,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.6.0"),
         // 🔵 Non-blocking, event-driven networking for Swift. Used for custom executors
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.65.0"),
-        .package(url: "https://github.com/vapor-community/PassKit.git", branch: "main"),
+        .package(url: "https://github.com/vapor-community/wallet.git", from: "0.7.0"),
     ],
     targets: [
         .executableTarget(
@@ -26,8 +26,8 @@ let package = Package(
                 .product(name: "Vapor", package: "vapor"),
                 .product(name: "NIOCore", package: "swift-nio"),
                 .product(name: "NIOPosix", package: "swift-nio"),
-                .product(name: "Passes", package: "passkit"),
-                .product(name: "Orders", package: "passkit"),
+                .product(name: "VaporWalletPasses", package: "wallet"),
+                .product(name: "VaporWalletOrders", package: "wallet"),
             ],
             swiftSettings: swiftSettings
         ),
@@ -35,7 +35,7 @@ let package = Package(
             name: "AppTests",
             dependencies: [
                 .target(name: "App"),
-                .product(name: "XCTVapor", package: "vapor"),
+                .product(name: "VaporTesting", package: "vapor"),
             ],
             swiftSettings: swiftSettings
         ),
