@@ -1,8 +1,8 @@
 import Fluent
-import VaporWalletOrders
 import FluentWalletOrders
-import WalletOrders
 import Vapor
+import VaporWalletOrders
+import WalletOrders
 
 final class OrderData: OrderDataModel, @unchecked Sendable {
     static let schema = OrderData.FieldKeys.schemaName

@@ -1,8 +1,8 @@
 import Fluent
 import FluentSQLiteDriver
+import Vapor
 import VaporWalletOrders
 import VaporWalletPasses
-import Vapor
 
 public func configure(_ app: Application) async throws {
     // uncomment to serve files from /Public folder

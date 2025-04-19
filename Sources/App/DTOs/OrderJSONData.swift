@@ -1,7 +1,7 @@
-import VaporWalletOrders
-import WalletOrders
 import FluentWalletOrders
 import Vapor
+import VaporWalletOrders
+import WalletOrders
 
 struct OrderJSONData: OrderJSON.Properties {
     let schemaVersion = OrderJSON.SchemaVersion.v1

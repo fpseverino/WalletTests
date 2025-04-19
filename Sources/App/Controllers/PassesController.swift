@@ -1,6 +1,6 @@
 import Fluent
-import VaporWalletPasses
 import Vapor
+import VaporWalletPasses
 
 struct PassesController: RouteCollection {
     let passesService: PassesService<PassData>

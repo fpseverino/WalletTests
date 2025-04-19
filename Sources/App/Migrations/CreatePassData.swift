@@ -1,6 +1,6 @@
 import Fluent
-import VaporWalletPasses
 import FluentWalletPasses
+import VaporWalletPasses
 
 struct CreatePassData: AsyncMigration {
     func prepare(on database: any Database) async throws {

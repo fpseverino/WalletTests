@@ -1,6 +1,6 @@
 import Fluent
-import VaporWalletOrders
 import Vapor
+import VaporWalletOrders
 
 struct OrdersController: RouteCollection {
     let ordersService: OrdersService<OrderData>

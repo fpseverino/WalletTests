@@ -8,13 +8,14 @@ let package = Package(
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
-        .package(url: "https://github.com/vapor/vapor.git", from: "4.108.0"),
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.110.1"),
         // 🗄 An ORM for SQL and NoSQL databases.
         .package(url: "https://github.com/vapor/fluent.git", from: "4.12.0"),
         // 🪶 Fluent driver for SQLite.
         .package(url: "https://github.com/vapor/fluent-sqlite-driver.git", from: "4.6.0"),
         // 🔵 Non-blocking, event-driven networking for Swift. Used for custom executors
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.65.0"),
+        // 🎟️ 📦 A package for creating passes and orders for Apple Wallet with Vapor.
         .package(url: "https://github.com/vapor-community/wallet.git", from: "0.7.0"),
     ],
     targets: [
@@ -39,13 +40,11 @@ let package = Package(
             ],
             swiftSettings: swiftSettings
         ),
-    ],
-    swiftLanguageModes: [.v5]
+    ]
 )
 
 var swiftSettings: [SwiftSetting] {
     [
-        .enableUpcomingFeature("DisableOutwardActorInference"),
-        .enableExperimentalFeature("StrictConcurrency"),
+        .enableUpcomingFeature("ExistantialAny")
     ]
 }

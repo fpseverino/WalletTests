@@ -1,7 +1,7 @@
-import VaporWalletPasses
-import WalletPasses
 import FluentWalletPasses
 import Vapor
+import VaporWalletPasses
+import WalletPasses
 
 struct PassJSONData: PassJSON.Properties {
     let description: String
